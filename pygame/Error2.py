@@ -28,11 +28,12 @@ class Player(pygame.sprite.Sprite):
         elif self.rect.bottom >= 768:
             self.rect.bottom = 768   
 
+           self.kill() 
 class AirParrot(pygame.sprite.Sprite):
     def __init__(self):
         super(AirParrot, self).__init__()
         self.image = pygame.image.load('AirParrot.png').convert()
-        self.rect = self.image.get_rect(center=(1050, random.randint(0, 768)))
+        self.rect = self.image.get_rect(center=(150, random.randint(0, 768)))
         self.speed = random.randint(0,2)
         
 pygame.init()     
